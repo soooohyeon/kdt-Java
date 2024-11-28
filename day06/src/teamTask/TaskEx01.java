@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TaskEx01 {
    public static void main(String[] args) {
-
+//	   황어진님  풀이 (참고-오류들 잡아두신 부분 있음)
       // 1. 숫자 업다운 QUIZ
 
       // logic
