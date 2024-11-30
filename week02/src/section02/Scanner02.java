@@ -15,7 +15,7 @@ public class Scanner02 {
 //		어떠한 값을 입력받아야 하는지 알기 위해 출력 메세지 작성
 		System.out.print("이름 주소, 나이, 체중을 빈칸으로 구분하여 순서대로 입력 : ");
 //		이름과 주소는 문자열 입력 메소드
-		name = sc.next();
+		name = sc.next(); 
 		address = sc.next();
 //		나이는 정수형 입력 메소드
 		age = sc.nextInt();

@@ -1,10 +1,26 @@
 package section02;
-//2. 변수 - 변수 선언과 초기화 ②
+//2. 변수 - 저장공간과 값 ①
 public class Variable03 {
 	public static void main(String[] args) {
-		String myCity = "Seoul";	// 문자열 타입 변수 선언과 초기화 동시에 진행
-									// 문자열 타입의 myCity 변수에 Seoul 이라는 값 대입
-		System.out.println("I am from " + myCity);	// () 안 데이터 출력하고 줄바꿈함
-		// "I am from " + "Seoul" = 문자열과 같이 작성된 + 기호는 덧셈 연산 기호가 아닌 문자열 연결해주는 기호
+//		[예제 01.]
+		int myAge = 20; 		// 정수형 타입 myAge 변수에 20이라는 값 대입 / myAge : 저장공간
+		int yourAge = myAge;	// 정수형 타입 yourAge 변수에 myAge의 값 대입 / myAge : 값
+		
+		System.out.println(myAge);		// () 안에 있는 myAge의 값을 출력하고 줄바꿈함
+		System.out.println(yourAge);	// () 안에 있는 yourAge의 값을 출력하고 줄바꿈함
+		
+
+//		[예제 02.]
+		int myAge2 = 20;		// 정수형 타입의 myAge 변수에 값 20으로 초기화
+		int yourAge2 = 30;	// 정수형 타입의 yourAge 변수에 값 30으로 초기화
+		int tempAge;		// 정수형 타입의 tempAge 선언
+		
+		tempAge = myAge2;	// tempAge에 myAge 값 20 대입 (초기화)
+		myAge2 = yourAge;	// myAge에 yourAgedml 값 30 대입
+		yourAge2 = tempAge;	// yourAge에 tempAge 값 20 대입
+//		이미 초기화된 변수에 새로운 값을 대입하게 되면 새로운 값으로 값이 변경됨
+		
+		System.out.println(myAge2);		// myAge의 값 출력하고 줄바꿈함
+		System.out.println(yourAge2);	// yourAge의 값 출력하고 줄바꿈함
 	}
 }

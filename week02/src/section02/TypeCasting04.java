@@ -1,6 +1,6 @@
 package section02;
 // 4. 형변환 : 정수와 실수 간의 형변환
-public class TypeCastint04 {
+public class TypeCasting04 {
 	public static void main(String[] args) {
 //		실수 → 정수
 		double pie = 3.14;			// 실수형 타입의 변수에 값 담기
