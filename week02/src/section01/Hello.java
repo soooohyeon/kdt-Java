@@ -1,4 +1,4 @@
-package basic;
+package section01;
 
 public class Hello {
 	public static void main(String[] args) {	// 프로그램 시작점
