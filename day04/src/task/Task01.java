@@ -49,7 +49,7 @@ public class Task01 {
 		weight = sc.nextInt();
 		bmi = weight / (double) (height * height);
 		bmi = bmi * 10000;
-		System.out.printf("BMI는 %.2f 퍼센트 입니다.\n", bmi);
+		System.out.printf("BMI는 %.2f%% 입니다.\n", bmi);
 		sc.nextLine();
 
 //    ---------------------------------------------------------------------
@@ -125,6 +125,7 @@ public class Task01 {
 		num3 = sc.nextInt();
 		result6 = (num3 / 10) + (num3 % 10);
 		System.out.println(num3 + "의 각 자리 수의 합 : " + result6);
+		sc.nextLine();
 
 //    ---------------------------------------------------------------------
 
