@@ -1,6 +1,6 @@
 package section04;
 import java.util.Scanner;
-// 1. 제어문(조건문) : if
+//1-1. 제어문(조건문) : if
 public class IfTest {
 	public static void main(String[] args) {
 //		[예제 01.]

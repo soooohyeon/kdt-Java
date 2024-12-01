@@ -1,8 +1,7 @@
 package section04;
 
 import java.util.Scanner;
-
-//1. 제어문(조건문)
+//1-2. 제어문(조건문) : if-else ②
 public class IfElseTest02 {
 	public static void main(String[] args) {
 //		[예제 05.]

@@ -1,5 +1,5 @@
 package section04;
-// 1. 제어문(조건문) : if-else
+//1-2. 제어문(조건문) : if-else ①
 public class IfElseTest01 {
 	public static void main(String[] args) {
 //		[예제 03.]
