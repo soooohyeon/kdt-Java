@@ -2,7 +2,7 @@ package task;
 
 import java.util.Scanner;
 
-public class Task01 {
+public class Task {
 	public static void main(String[] args) {
 //      풀이한 내용 메모장에 따로 저장 후 강사님께 보내기 (파일명_이름)
 

@@ -4,7 +4,7 @@ import java.util.Scanner; // import 값 가져오기
 
 public class Task02 {
 	public static void main(String[] args) {
-//		문제2) OX퀴즈
+//		문제 2) OX퀴즈
 //			- 1번 정답시 '정답입니다' 출력 후 2번 문제 출력, 오답시 '오답입니다' 출력 후 프로그램 종료
 //			- 2번 정답시 '정답입니다' 출력 후 프로그램 종료, 오답시 '오답입니다' 출력 후 프로그램 종료
 //			문제2-1) 독사가 자기 혀를 깨물면 죽는다?		정답 : X
