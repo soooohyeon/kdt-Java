@@ -1,6 +1,6 @@
 package twoForTest;
 
-public class twoForTask {
+public class TwoForTask02 {
 	public static void main(String[] args) {
 //		**** 과제
 //			1|
