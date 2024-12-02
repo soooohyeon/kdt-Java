@@ -240,19 +240,30 @@ public class ArrayTask01 {
 //			3과목은 배열에 입력받아 저장하며 for-each문만 사용 (일반 for문 사용 금지)
 //		** 로직
 //		1) 3칸짜리 배열 생성, 총점(정수)과 평균(실수)을 담을 변수 생성
-//		2) 출력메세지 및 3과목 점수 입력 받고 배열에 담기
+//		2) 출력메세지 및 3과목 for-each 사용해서 점수 입력 받고 배열에 담기
 //		3) for-each 사용해서 총점 구하기, 총점 += 배열값
 //		4) 총점 형변환해서 평균 구하기, 평균 = (double)(총점) / 배열길이
-//		5) 결과 출력 (총점, 평균)
+//		5) 결과 출력 (총점, 평균) - printf();
 //		6) 버퍼 비우기 (입력 클래스 종료)
 		
 		int scores[] = new int[3];
+		int index = 0;		// for-each문에서 사용하기 위한 변수
 		int total3 = 0;
 		double avg2 = 0.0;
-		System.out.print("3과목 점수를 입력 (띄어쓰기로 구분) : ");
-		scores[0] = sc.nextInt();
-		scores[1] = sc.nextInt();
-		scores[2] = sc.nextInt();
+		
+//		점수 입력 방법 (1)
+//		System.out.print("3과목 점수 입력 (띄어쓰기로 구분) : "); 
+//		scores[0] = sc.nextInt();
+//		scores[1] = sc.nextInt();
+//		scores[2] = sc.nextInt();
+		
+//		점수 입력 방법 (2) : for-each 사용, 인덱스 변수를 따로 사용해야해서 일반 for문을 이용하는게 더 간편함
+		for (int score : scores) {
+			System.out.print("점수 입력 : "); 
+			score = sc.nextInt();
+			scores[index++] = score;	// 증감식 후위형으로 사용으로 인덱스 0부터 시작
+		}
+		
 		for (int score : scores) {	// 점수배열 반복 돌려서 총합 구하기
 			total3 += score;
 		}
