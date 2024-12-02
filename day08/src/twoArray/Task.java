@@ -3,7 +3,7 @@ package twoArray;
 import java.util.Arrays;
 import java.util.Scanner;
 
-//12.
+//12. 2차원 배열 실습
 public class Task {
 	public static void main(String[] args) {
 //		1. 3x3 크기의 2차원 배열을 생성하고 사용자가 입력한 값을 넣은 뒤

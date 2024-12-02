@@ -2,7 +2,7 @@ package twoArray;
 
 import java.util.Arrays;
 
-//8. Arrays.toString()를 이용한 정렬
+//8. Arrays.toString()를 이용한 출력
 public class ArraysTest02 {
 	public static void main(String[] args) {
 //		1차원 배열
