@@ -100,6 +100,7 @@ public class MethodTask {
 			min = min > ar[i] ? ar[i] : min;
 			max = max < ar[i] ? ar[i] : max;
 		}
+		System.out.println("최소값 : " + min + ", 최대값 : " + max);
 	}
 	
 //	6. 소문자는 대문자로, 대문자는 소문자로 바꿔주는 메소드
@@ -125,7 +126,8 @@ public class MethodTask {
 	
 	String changeCase(String str) {
 		char c = ' ';
-		String result = null;
+//		문자열 누적으로 계산될때는 ""로 초기화, null도 하나의 값으로 인식
+		String result = "";
 		for (int i = 0; i < str.length(); i++) {
 			c = str.charAt(i);
 			if (c >= 97 && c <= 122) {
@@ -160,6 +162,41 @@ public class MethodTask {
 	}
 	
 	public static void main(String[] args) {
+		MethodTask mt = new MethodTask();
 		
+//		1. 매개변수 o, 리턴 x / 호출 ⇒ sysout(객체명.메소드명(인수));
+		System.out.println("1-1번 답 : " + mt.changeSign(7));
+		System.out.println("1-2번 답 : " + mt.changeSign(-3));
+		
+//		2. 매개변수 2개, 리턴 o / 호출 ⇒ sysout(객체명.메소드명(문자열, 정수));
+		System.out.println("2번 " + mt.printName("홍길동", 7));
+		
+//		3. 매개변수 1개, 리턴 o / 호출 ⇒ int 변수 = 객체명.메소드명(정수);
+		int number = mt.changeNumber(10);
+		System.out.println("3번 답 : " + number);
+		
+//		4. 매개변수 1개(배열), 리턴 o / 호출 ⇒ double 변수 = 객체명.메소드명(배열);
+		int[] ar = {1, 2, 3, 4, 5};
+		double avg = mt.getAvg(ar);
+		System.out.println("4번 답 : " + avg);
+//		System.out.println("4번 답 : " + mt.getAvg({1, 2, 3, 4, 5}));		// 배열값만 집어넣은 것일 뿐 배열을 생성한 것이 아님
+		System.out.println("4번 답 : " + mt.getAvg(new int[]{1, 2, 3, 4, 5}));
+		
+//		5. 매개변수 1개(배열), 리턴 x / 호출 ⇒ 객체명.메소드명(배열);
+		System.out.println("-- 5번 답 --");
+		mt.printMinMax(ar);
+		mt.printMinMax(new int[] {10, 20, -5, 1, 7});
+		
+//		6. 매개변수 1개(문자열), 리턴 o / 호출 ⇒ sysout(객체명.메소드명(배열));
+		System.out.println("6번 답 : " + mt.changeCase("BanANa"));
+		
+//		7.
+		System.out.println("-----7번-----");
+		System.out.println(mt.login("admin", "1234"));
+		if (mt.login("admin", "1234")) {
+			System.out.println("관리자님 환영합니다");
+		} else {
+			System.out.println("잘못입력했습니다");
+		}
 	}
 }
