@@ -38,12 +38,12 @@ public class TeamTask {
 //		    출력메세지 및 입력받은 값 변수에 담기
 //		    메소드 사용하고 리턴 받은 값 변수에 담기
 //		    ① if (키워드 o && 기회 > 0) 
-//		    “당신은 귀엽습니다” 출력;
-//		    기회변수—;
+//			    “당신은 귀엽습니다” 출력;
+//			    기회변수—;
 //		    ② else if (키워드 x) 
-//		    “잘하고 있습니다, 앞으로도 그렇게 사용해주세요” 출력
+//		    	“잘하고 있습니다, 앞으로도 그렇게 사용해주세요” 출력
 //		    ③ else if (기회 == 0)
-//		    “이제 그 만” 출력하고 반복문 종료;
+//		    	“이제 그 만” 출력하고 반복문 종료;
 //		5. 버퍼 비우기
 //		Scanner sc = new Scanner(System.in); 
 //		TeamTask tt = new TeamTask();        
@@ -62,10 +62,10 @@ public class TeamTask {
 			} else if (flag == 0) { // 키워드가 들어가 있지 않다면              
 				System.out.println("잘하고 있습니다, 앞으로도 그렇게 사용해주세요");
 			} else if (count == 0) { // 키워드가 들어가 있고 기회도 없다면
-					System.out.println(" 그 만 ");
-					break; // 반복 탈출
+				System.out.println(" 그 만 ");
+				break; // 반복 탈출
 			}
-		}                                           
+		}
 //		sc.close();
 		
 //		Q3. 오늘의 운세 확인
@@ -153,7 +153,7 @@ public class TeamTask {
 	int iAmCute(String cutePhrase) {
 		String foo = "";
 		String result = "";
-		int flag = 0;
+		int flag = 0; 
 
 		for (int i = 0; i < cutePhrase.length(); i++) {
 			foo = cutePhrase.charAt(i) + "";
