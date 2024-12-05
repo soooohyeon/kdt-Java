@@ -73,9 +73,5 @@ public class BasicTvMain {
 				System.out.println("잘못된 번호 선택입니다.\n다시 선택해주세요.");
 			}
 		}
-		
-		
-		
-		
 	}
 }
