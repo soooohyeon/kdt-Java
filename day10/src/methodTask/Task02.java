@@ -153,6 +153,92 @@ public class Task02 {
 	}
 	
 //	====================================================================
+	
+//	문제03. 메소드 회원가입 (메소드로 코드 분리하기)
+//		회원가입(입력 : 아이디, 닉네임, 비번, 비번확인)
+//		→ 배열로 임의로 아이디와 닉네임 만들기(배열은 1차원 배열, 값은 각 3개)
+//		→ 회원가입 시 배열에 있는 아이디를 사용한다고 하면 중복된다고 알려주기
+//		→ 닉네임도 겹치면 알려주기
+//		→ 비번은 두번 입력 받아 두개의 비번이 동일해야 하며, 아스키코드로 암호화
+//		→ 겹치는거 없고, 비번도 다 맞으면 "회원가입 성공" 후 끝
+//		→ 최종출력 "userName님 환영합니다, 아이디는 userId, 비밀번호는 암호화된 {아스키코드값} 입니다"
+//		└ 배열, 메소드, for문, if문, 형변환
+//	** 로직
+//	메소드 구분 : 아이디 중복 검사, 닉네임 중복 검사, 비밀번호 일치, 비밀번호 형변환
+//	** 아이디 중복 검사 메소드
+//	1) 리턴타입 : 우선 void
+//	2) 메소드명 : checkId
+//	3) 매개변수 : String id
+//	4) 실행할 코드
+//		결과 변수 선언 및 초기화
+//		String 기존ID배열 = {값3개};
+//		for (기존ID배열 길이만큼 반복) {
+//			결과 = id.equals(기존ID[i]) ? flag : true; 
+//			if (flag가 false라면) return flag; }
+//	5) 논리형으로 결과 리턴 (중복체크 통과면 true)
+	boolean checkId(String id) {
+		boolean flag = true;
+		String[] memberId = {"abc", "JAVA" , "CrayOnSin"};
+			for (int i = 0; i < memberId.length; i++) {
+				flag = id.equals(memberId[i]) ? false : flag;
+				if (flag == false) {
+					return flag;
+				}
+			}
+			return flag;
+	}
+//	** 닉네임 중복 검사 메소드
+//	1) 리턴타입 : 우선 void
+//	2) 메소드명 : checkNickName
+//	3) 매개변수 : String nickName
+//	4) 실행할 코드 (위 아이디 중복체크와 로직 같음)
+//		결과 변수 선언 및 초기화
+//		String 기존nickName배열 = {값3개};
+//		for (기존nickName배열 길이만큼 반복) {
+//			결과 = nickName.equals(기존nickName[i]) ? false : flag; }
+//			if (flag가 false라면) return flag; }
+//	5) 논리형으로 결과 리턴 (중복체크 통과면 true)
+	boolean checkNickName(String nickName) {
+		boolean flag = true;
+		String[] memberNickName = {"JAVA좋아", "코딩연습" , "공부해라"};
+			for (int i = 0; i < memberNickName.length; i++) {
+				flag = nickName.equals(memberNickName[i]) ? false : flag;
+				if (flag == false) {
+					return flag;
+				}
+			}
+		return flag;
+	}
+//	** 비밀번호 일치 여부 확인 메소드
+//	1) 리턴타입 : 우선 void
+//	2) 메소드명 : checkPw
+//	3) 매개변수 : String pw, rePw
+//	4) 실행할 코드
+//		결과 변수 선언 및 초기화
+//		결과 = pw.equals(rePw) ? flag : true;
+//	5) 논리형으로 결과 리턴 (중복체크 통과면 true)
+	boolean checkPw(String pw , String rePw) {
+		return pw.equals(rePw) ? true : false;
+	}
+//	** 비밀번호 아스키코드로 암호화
+//	1) 리턴타입 : 우선 void
+//	2) 메소드명 : castingPw
+//	3) 매개변수 : String pw
+//	4) 실행할 코드
+//		결과 변수 선언 및 초기화
+//		for (문자열길이 만큼 반복) {
+//			결과 += ((int)문자열.charAt(i) + ""); }
+//		sysout (암호화된 비밀번호)
+//	5) 암호화된 문자형 결과 리턴
+	String castingPw (String pw) {
+		String result = "";
+		for (int i = 0; i < pw.length(); i++) {
+			result += ((int)pw.charAt(i) + "");
+		}
+		return result;
+	}
+	
+//	====================================================================
 		
 
 	public static void main(String[] args) {
@@ -170,23 +256,23 @@ public class Task02 {
 //			5-1) 곱셈 : "곱셈 결과는 00입니다" 출력 (메소드 사용)
 //			5-1) 나눗셈
 //				나눗셈 메소드 값 == 0.0 ? "0으로는 나눌 수 없습니다" 출력 : "나눗셈 결과는 00입니다" 출력;
-		Task02 t = new Task02();
-		Scanner sc = new Scanner(System.in);
-		int[] numbers = new int[2];
-		String result = "";
-		for (int i = 0; i < numbers.length; i++) {
-			System.out.printf("정수%d 입력 : ", i+1);
-			numbers[i] = sc.nextInt();
-		}
-		
-		result = "덧셈 결과는 " + t.add(numbers) + " 입니다.";
-		System.out.println(result);
-		result = "뺄셈 결과는 " + t.add(numbers) + " 입니다.";
-		System.out.println(result);
-		result = "곱셈 결과는 " + t.add(numbers) + " 입니다.";
-		System.out.println(result);
-		result = t.divide(numbers) == 0.0 ? "0은 나눌 수 없습니다." : "나눗셈 결과는 " + t.divide(numbers) + " 입니다.";
-		System.out.println(result);
+//		Task02 t = new Task02();
+//		Scanner sc = new Scanner(System.in);
+//		int[] numbers = new int[2];
+//		String result = "";
+//		for (int i = 0; i < numbers.length; i++) {
+//			System.out.printf("정수%d 입력 : ", i+1);
+//			numbers[i] = sc.nextInt();
+//		}
+//		
+//		result = "덧셈 결과는 " + t.add(numbers) + " 입니다.";
+//		System.out.println(result);
+//		result = "뺄셈 결과는 " + t.add(numbers) + " 입니다.";
+//		System.out.println(result);
+//		result = "곱셈 결과는 " + t.add(numbers) + " 입니다.";
+//		System.out.println(result);
+//		result = t.divide(numbers) == 0.0 ? "0은 나눌 수 없습니다." : "나눗셈 결과는 " + t.divide(numbers) + " 입니다.";
+//		System.out.println(result);
 		
 //		문제 02. 메소드를 활용한 연령대별 버스카드 프로그램
 //		** 로직
@@ -199,18 +285,71 @@ public class Task02 {
 //		Task02 t = new Task02();
 //		Scanner sc = new Scanner(System.in);
 
-		int age = 0, money = 0;
-		System.out.print("나이 입력 : ");
-		age = sc.nextInt();
-		if (age < 8 && age > 0) {
-			System.out.println("무료입니다.\n탑승하세요.");
-		} else if (age <= 0) {
-			System.out.println("잘못된 입력입니다.");
-		} else {
-			System.out.print("충전 요금 입력 : ");
-			money = sc.nextInt();
-			t.useTmoney(money, t.selectAgeGroup(age));
+//		int age = 0, money = 0;
+//		System.out.print("나이 입력 : ");
+//		age = sc.nextInt();
+//		if (age < 8 && age > 0) {
+//			System.out.println("무료입니다.\n탑승하세요.");
+//		} else if (age <= 0) {
+//			System.out.println("잘못된 입력입니다.");
+//		} else {
+//			System.out.print("충전 요금 입력 : ");
+//			money = sc.nextInt();
+//			t.useTmoney(money, t.selectAgeGroup(age));
+//		}
+		
+//		문제 03. 메소드 회원가입 (메소드로 코드 분리하기)
+//		** 로직
+//		1) Scanner 클랙스 import
+//		2) 메소드 사용을 위한 클래스 객체화
+//		3) 입력받을 아이디, 닉네임, 비밀번호 2개 변수 선언
+//		4) while 무한 반복
+//		5) id 값이 없다면 입력받기
+//		6) id 중복검사 (메소드 사용)
+//			6-1) id 중복이 있다면 id 변수 비우고 중복 메세지 출력
+//			6-2) id 중복이 없다면 닉네임 빈문자열일 때 입력 받고 중복 검사 (메소드 사용)
+//			6-3) 닉네임 중복이 있다면 닉넴임 변수 비우고 중복 메세지 출력
+//			6-4) 닉네임 중복이 아니라면 비밀번호 2번 입력 받고 일치 검사 (메소드 사용)
+//			6-5) 비밀번호가 일치하지 않다면 불일치 메세지 띄우고 비밀번호 변수 비우고 입력받기
+//			6-6) 비밀번호가 일치하다면 결과 출력
+		Task02 t = new Task02();
+		Scanner sc = new Scanner(System.in);
+		
+		String id = "", nickName = "", pw = "", rePw = "";
+		while (true) {
+			if (id.equals("")) {	// 아이디 중복 통과 후 닉네임 중복시 되돌아 오는 것 방지
+				System.out.print("아이디 입력 : ");
+				id = sc.next();
+			}
+			if (t.checkId(id)) {	// 아이디 중복 통과
+				if (nickName.equals("")) { 	// 닉네임 중복 통과 후 비밀번호 불일치시 되돌아 오는 것 방지
+					System.out.print("닉네임 입력 : ");
+					nickName = sc.next();
+				}
+				if (t.checkNickName(nickName)) {	// 닉네임 중복 통과
+					System.out.print("비밀번호 입력 : ");
+					pw = sc.next();
+					System.out.print("비밀번호 재입력 : ");
+					rePw = sc.next();
+					if (t.checkPw(pw, rePw)) {	// 비밀번호 일치
+						System.out.println(nickName + "님 환영합니다, 아이디는 " + id 
+								+ ", 비밀번호는 암호화된 " + t.castingPw(pw) + "입니다.");
+						break;
+					} else {	// 비밀번호 불일치
+						pw = "";
+						rePw = "";
+						System.out.println("비밀번호가 일치하지 않습니다.\n");
+					}
+				} else {	// 닉네임 중복
+					nickName = "";
+					System.out.println("중복된 닉네임 입니다.\n");
+				}
+			} else {	// 아이디 중복
+				id = "";
+				System.out.println("중복된 아이디 입니다.\n");
+			}
 		}
+		sc.close();
 	}
 	
 }
