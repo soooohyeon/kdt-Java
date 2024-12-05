@@ -42,6 +42,8 @@ public class BasicTv {
 //		** 삼항연산자 사용해서 결과를 문자열 변수에 담고 문자열 변수 출력
 //	2) 현재 power의 값의 반대된 값을 다시 넣으면 됨
 	void powerOnOff() {
+//		아래 코드는 전원을 껐다 켰을때 번호 초기화를 위한 코드, 현재는 전원 끄고 킬때 채널 번호 유지되도록 해둠
+//		this.channel = 1;→
 		String powerMsg = power ? "TV 전원이 꺼졌습니다." : "TV 전원이 켜졌습니다.";
 		System.out.println(powerMsg);
 		this.power = ! this.power;
@@ -81,6 +83,7 @@ public class BasicTv {
 				System.out.println("현재 채널이 " + this.channel + "번 입니다.\n맨 마지막으로 되돌아 갑니다.");
 				this.channel = 999;
 			}
+			System.out.println("현재 채널: " + this.channel);
 		} else {
 			System.out.println("TV 전원을 먼저 켜주세요.");
 		}
