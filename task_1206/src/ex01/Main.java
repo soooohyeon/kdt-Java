@@ -21,25 +21,33 @@ public class Main {
 //		2) 입력받을 과목 2개 변수 생성 및 초기화
 //		3) 메세지 출력 및 입력받은 값 변수에 담기
 //		4) 객체 생성 (입력 받은 값 넣기)
+//		5) 결과 출력 (학점 및 통과 여부)
 		Scanner sc = new Scanner(System.in);
-		int javaScroe = 0, dbmsScroe = 0;
-		
-		System.out.print("JAVA 점수 입력 : ");
+		int javaScroe = 0, dbmsScroe = 0, total = 0;
+		String name = "";
+
+		System.out.print("1번 이름 입력 : ");
+		name = sc.next();
+		System.out.print(name + "님 JAVA 점수 입력 : ");
 		javaScroe = sc.nextInt();
-		System.out.print("DBMS 점수 입력 : ");
+		System.out.print(name + "님 DBMS 점수 입력 : ");
 		dbmsScroe = sc.nextInt();
-		Main m1 = new Main("짱구", javaScroe, dbmsScroe);
+		Main m1 = new Main (name, javaScroe, dbmsScroe);
 		
-		System.out.print("JAVA 점수 입력 : ");
+		System.out.print("2번 이름 입력 : ");
+		name = sc.next();
+		System.out.print(name + "님 JAVA 점수 입력 : ");
 		javaScroe = sc.nextInt();
-		System.out.print("DBMS 점수 입력 : ");
+		System.out.print(name + "님 DBMS 점수 입력 : ");
 		dbmsScroe = sc.nextInt();
-		Main m2 = new Main("철수", javaScroe, dbmsScroe);
+		Main m2 = new Main (name, javaScroe, dbmsScroe);
+			
+			
 		
 		System.out.println(m1.name + "님의 학점은 " + m1.grade + "입니다.");
 		System.out.println(m2.name + "님의 학점은 " + m2.grade + "입니다.");
-		System.out.println(m1.name + "님 평균 점수 : ");
-		System.out.println(m2.name + "님 평균 점수 : ");
+		System.out.println(m1.name + "님 통과 여부 : " + m1.isPass(m1.total));
+		System.out.println(m2.name + "님 통과 여부 : " + m2.isPass(m2.total));
 	}
 //	** 로직
 //	1) 필드 생성
@@ -77,7 +85,6 @@ public class Main {
 			return 'F';
 		}
 	}
-
 
 //	1. 점수 70점 이상이면 true, 아니면 false 반환하는 메소드 (매개변수 1개 정수형 - 총점을 매개변수로 받기)
 //	2. 메소드명 isPass
