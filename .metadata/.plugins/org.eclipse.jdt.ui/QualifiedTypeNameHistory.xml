@@ -7,4 +7,8 @@
     <fullyQualifiedTypeName name="int"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="javax.security.auth.Subject"/>
+    <fullyQualifiedTypeName name="staticTest.StaticTest01"/>
+    <fullyQualifiedTypeName name="staticTest.MyClassA"/>
+    <fullyQualifiedTypeName name="constatntTest.ConstantTest"/>
+    <fullyQualifiedTypeName name="java.awt.DefaultFocusTraversalPolicy"/>
 </qualifiedTypeNameHistroy>

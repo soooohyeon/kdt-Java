@@ -23,11 +23,13 @@ public class Main {
 //		4) 객체 생성 (입력 받은 값 넣기)
 		Scanner sc = new Scanner(System.in);
 		int javaScroe = 0, dbmsScroe = 0;
+		
 		System.out.print("JAVA 점수 입력 : ");
 		javaScroe = sc.nextInt();
 		System.out.print("DBMS 점수 입력 : ");
 		dbmsScroe = sc.nextInt();
 		Main m1 = new Main("짱구", javaScroe, dbmsScroe);
+		
 		System.out.print("JAVA 점수 입력 : ");
 		javaScroe = sc.nextInt();
 		System.out.print("DBMS 점수 입력 : ");
