@@ -1,6 +1,6 @@
 package accessTest2;
 
-import accessTest.Parent;
+import accessTest1.Parent;
 
 public class OuterClass {
 	public static void main(String[] args) {

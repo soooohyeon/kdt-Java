@@ -4,13 +4,11 @@ public class EnumTest {
 	enum Day {	// 불변 객체기 때문에 수정이나 추가가 불가능 / 즉, 변할 수 없는 상수들의 집합(클래스)
 		SUNDAY(false), MONDAY(true), TUESDAY(true), THURSDAY(true), FRIDAY(true), SATURDAY(false);
 //		↑ 하나의 객체로 만들어 생성자로 취급한 것
-//		열거형은 nuw 키워드가 빠졌다고 생각하면 됨
-		
+//		열거형은 new 키워드가 빠졌다고 생각하면 됨
 		boolean week;			// 필드
 		Day(boolean week) {		// 생성자
 			this.week = week;
 		}
-		
 		boolean weekday() {		// 메소드
 			return this.week;
 		}
@@ -42,16 +40,18 @@ public class EnumTest {
 //		enum은 static이기 때문에 클래스명인 Day.메소드명()으로 사용 가능
 		Day[] days = Day.values();	// 모든 열거형 값을 배열로 가져오는 메소드
 		
-//		System.out.println(days);
-//		for (Day day : days) {
-//			System.out.println(day);
-//		}
+		System.out.println(days);
+		for (Day day : days) {
+			System.out.println(day);
+		}
+		
 		
 //		평일만 가져오기
-		for (Day day : days) {
-				System.out.println(day);
-				
-		}
+//		for (Day day : days) {
+//			if (!day.equals(Day.SUNDAY) && !day.equals(Day.SATURDAY) )
+//				System.out.println(day);
+//				
+//		}
 		
 		
 	}

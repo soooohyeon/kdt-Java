@@ -26,6 +26,4 @@ public class SuperCar extends Car {
 		super(brand, color, price); 
 		this.booster = booster;
 	}
-	
-	
 }

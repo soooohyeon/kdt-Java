@@ -6,7 +6,7 @@ public class StaticTest01 {
 //		클래스명. 했을 때 메소드 아이콘에 s 붙은 것 확인 : static 사용된 것 표시됨
 		StaticTest01.staticMethod();
 		
-//		같은 클래스에 있는 static 메소드는 메소등명으로도 호출 가능
+//		같은 클래스에 있는 static 메소드는 메소드명으로도 호출 가능
 		staticMethod();
 		
 //		인스턴스 메소드를 호출하기 위해 객체 생성

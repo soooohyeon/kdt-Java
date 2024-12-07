@@ -1,4 +1,4 @@
-package accessTest;
+package accessTest1;
 
 public class Parent {
 //	필드

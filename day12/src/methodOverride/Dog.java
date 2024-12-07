@@ -13,5 +13,4 @@ public class Dog extends Animal {
 	void sound() {
 		System.out.println(this.name + "의 멍멍!");
 	}
-	
 }
