@@ -5,10 +5,14 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="int"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="javax.security.auth.Subject"/>
     <fullyQualifiedTypeName name="staticTest.StaticTest01"/>
     <fullyQualifiedTypeName name="staticTest.MyClassA"/>
     <fullyQualifiedTypeName name="constatntTest.ConstantTest"/>
     <fullyQualifiedTypeName name="java.awt.DefaultFocusTraversalPolicy"/>
+    <fullyQualifiedTypeName name="task.Employee"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="section07.Student"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.SeparatorUI"/>
 </qualifiedTypeNameHistroy>

@@ -64,5 +64,4 @@ public class Book {
 		System.out.println("E-Book1\n제목 : " + eb1.title + ", 작가 : " + eb1.author + ", 용량 : " + eb1.sizeInMB + "MB");
 		System.out.println("E-Book2\n제목 : " + eb2.title + ", 작가 : " + eb2.author + ", 용량 : " + eb2.sizeInMB + "MB");
 	}
-	
 }
