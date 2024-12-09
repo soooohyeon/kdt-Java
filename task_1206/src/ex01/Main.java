@@ -46,8 +46,8 @@ public class Main {
 		
 		System.out.println(m1.name + "님의 학점은 " + m1.grade + "입니다.");
 		System.out.println(m2.name + "님의 학점은 " + m2.grade + "입니다.");
-		System.out.println(m1.name + "님 통과 여부 : " + m1.isPass(m1.total));
-		System.out.println(m2.name + "님 통과 여부 : " + m2.isPass(m2.total));
+		System.out.println(m1.name + "님 통과 여부 : " + (m1.isPass(m1.total)? "pass" : "fail"));
+		System.out.println(m2.name + "님 통과 여부 : " + (m2.isPass(m2.total)? "pass" : "fail"));
 	}
 //	** 로직
 //	1) 필드 생성
@@ -57,6 +57,7 @@ public class Main {
 	int dbmsScroe;
 	int total;
 	char grade;
+//	String grade; → __점까지 넣을거라면 String 타입도 상관 x
 	
 //	생성자
 	public Main(String name, int javaScroe, int dbmsScroe) {
@@ -65,6 +66,8 @@ public class Main {
 		this.dbmsScroe = dbmsScroe;
 		this.total = this.javaScroe + this.dbmsScroe;
 		this.grade = calculateGrade(this.total);
+//		this.grade = (javaScroe + dbmsScroe) / 2;
+//		→ 해당부분 자체를 calculateGrade 메소드의 매개변수로 넣어줘도 됨
 	}
 	
 //	메소드 생성
@@ -77,9 +80,9 @@ public class Main {
 		int avg = total / 2;
 		if (avg >= 90) {
 			return 'A';
-		} else if (avg >= 80 && avg < 90) {
+		} else if (avg >= 80) {
 			return 'B';
-		} else if (avg >= 70 && avg < 80) {
+		} else if (avg >= 70) {
 			return 'C';
 		} else {
 			return 'F';
@@ -92,7 +95,8 @@ public class Main {
 //		리턴타입 boolean
 //		삼항연산자 (총점/2) >= 70 ? true : false
 	boolean isPass (int total) {
-		return (total/2) >= 70 ? true : false;
+//		return (total/2) >= 70 ? true : false;
+		return (total/2) >= 70;
 	}
 	
 }
