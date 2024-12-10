@@ -31,4 +31,17 @@
     <fullyQualifiedTypeName name="section10.AccessTest03"/>
     <fullyQualifiedTypeName name="java.lang.ScopedValue"/>
     <fullyQualifiedTypeName name="section10.SchoolBus"/>
+    <fullyQualifiedTypeName name="section11.Parent"/>
+    <fullyQualifiedTypeName name="section11.SchoolBus"/>
+    <fullyQualifiedTypeName name="section11.OpenCar"/>
+    <fullyQualifiedTypeName name="section11.SportsCar"/>
+    <fullyQualifiedTypeName name="section11.DeskCalendar"/>
+    <fullyQualifiedTypeName name="section11.Calendar"/>
+    <fullyQualifiedTypeName name="section11.FourWheelBike"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
+    <fullyQualifiedTypeName name="section11.Computer"/>
+    <fullyQualifiedTypeName name="section11.ComputerRoom"/>
+    <fullyQualifiedTypeName name="section11.Speaker"/>
+    <fullyQualifiedTypeName name="section11.RedSpeaker"/>
+    <fullyQualifiedTypeName name="section11.Person"/>
 </qualifiedTypeNameHistroy>
