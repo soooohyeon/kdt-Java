@@ -15,4 +15,20 @@
     <fullyQualifiedTypeName name="section07.Student"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.SeparatorUI"/>
+    <fullyQualifiedTypeName name="interfaceTest2.Ballad"/>
+    <fullyQualifiedTypeName name="classInterface.Parent"/>
+    <fullyQualifiedTypeName name="classInterface.InterfaceAAA"/>
+    <fullyQualifiedTypeName name="interfaceTest3.ParentA"/>
+    <fullyQualifiedTypeName name="interfaceTest3.ParentB"/>
+    <fullyQualifiedTypeName name="interfaceTest3.Child"/>
+    <fullyQualifiedTypeName name="interfaceTest4.SmartHeater"/>
+    <fullyQualifiedTypeName name="interfaceTest4.HeaterAdapter"/>
+    <fullyQualifiedTypeName name="section10.Comic"/>
+    <fullyQualifiedTypeName name="section10.Customer"/>
+    <fullyQualifiedTypeName name="section10.Samsong"/>
+    <fullyQualifiedTypeName name="section10.Computer"/>
+    <fullyQualifiedTypeName name="java.io.PushbackInputStream"/>
+    <fullyQualifiedTypeName name="section10.AccessTest03"/>
+    <fullyQualifiedTypeName name="java.lang.ScopedValue"/>
+    <fullyQualifiedTypeName name="section10.SchoolBus"/>
 </qualifiedTypeNameHistroy>
