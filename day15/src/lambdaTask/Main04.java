@@ -9,7 +9,6 @@ public class Main04 {
 //			FuNnY JaVa
 //			각 단어를 대문자, 소문자로 번갈아서 변환한다.
 //			- 띄어쓰기가 나오면 다시 대문자로 시작한다.
-		
 		Main04 m = new Main04();	// 객체화
 //		m 메소드 안에 인터페이스 익명메소드로 구현해둔 오버라이딩 메소드 호출
 		System.out.println(m.changeMsg().changeChar("funny java"));
@@ -54,5 +53,4 @@ public class Main04 {
 		};
 		return c;
 	}
-	
 }

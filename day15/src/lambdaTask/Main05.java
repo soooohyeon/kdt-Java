@@ -11,7 +11,6 @@ public class Main05 {
 //		m 메소드 안에 인터페이스 익명메소드로 구현해둔 오버라이딩 메소드 호출
 		System.out.println(m.changeMark().changeChar("korea, Spain, Germaney, America"));
 		System.out.println(m.changeMark2().changeChar("korea, Spain, Germaney, America"));
-		
 	}
 //	메소드 로직
 //	- 기능 : 알파벳 대소문자 번갈아서 변환하는 메소드
@@ -30,7 +29,6 @@ public class Main05 {
 		};
 		return c;
 	}
-	
 //		(2) 아스키코드 이용 (,은 44)
 //		인터페이스 객체명 = 매개변수 -> {
 //			for (매개변수 길이만큼 반복) {
@@ -49,7 +47,4 @@ public class Main05 {
 		};
 		return c;
 	}
-	
-	
-	
 }

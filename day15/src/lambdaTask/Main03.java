@@ -13,15 +13,12 @@ public class Main03 {
 			@Override
 			public String cutString(String msg1, String msg2) {
 				String result = "";
-				
 //				(1) 문자열 메소드 substring((해당인데스-1)부터)사용
 //				result = msg1.substring(msg2.length());
-				
 //				(2) for문 사용
 				for (int i = msg2.length(); i < msg1.length(); i++) {
 					result += (msg1.charAt(i) + "");
 				}
-				
 				return result;
 			}
 		};
@@ -36,7 +33,6 @@ public class Main03 {
 		System.out.println("F 입력시 : " + result1);
 		System.out.println("B 입력시 : " + result2);
 		System.out.println("다른 문자 입력시 : " + result3);
-		
 	}
 //	(2) Main2.java(클래스)에 다음과 같은 static 메소드를 선언한다.
 //    - 매개변수로 문자열을 전달받는다.
