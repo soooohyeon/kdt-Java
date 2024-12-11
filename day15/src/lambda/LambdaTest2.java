@@ -63,5 +63,5 @@ public class LambdaTest2 {
 //	4. 명령문이 2개 이상이면 {}와 ; 생략 불가
 //	   ** 반환할 값이 존재한다면 return 사용해야함
 //	(num1, num2) -> { System.out.println("num1의 값 : " + num1 + ", num2의 값 : " + num2);
-//					  return num1 + num2; }
+//					  return num1 + num2; };
 }

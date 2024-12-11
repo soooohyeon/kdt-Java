@@ -44,4 +44,17 @@
     <fullyQualifiedTypeName name="section11.Speaker"/>
     <fullyQualifiedTypeName name="section11.RedSpeaker"/>
     <fullyQualifiedTypeName name="section11.Person"/>
+    <fullyQualifiedTypeName name="section12.PineapllePhone"/>
+    <fullyQualifiedTypeName name="ex04_박수현.Student"/>
+    <fullyQualifiedTypeName name="ex05_박수현.Animal"/>
+    <fullyQualifiedTypeName name="ex06_박수현.AdvanceAccount"/>
+    <fullyQualifiedTypeName name="InnerTest.Outer.Inner"/>
+    <fullyQualifiedTypeName name="anonymousTest2.Calculator"/>
+    <fullyQualifiedTypeName name="lambda.LambdaTest"/>
+    <fullyQualifiedTypeName name="lambda2.FunctionalInter1"/>
+    <fullyQualifiedTypeName name="lambda2.FunctionalInter2"/>
+    <fullyQualifiedTypeName name="lambdaTask.FunctionalInter01"/>
+    <fullyQualifiedTypeName name="lambdaTask.MultipleInter"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="lambdaTask.SubInter"/>
 </qualifiedTypeNameHistroy>
