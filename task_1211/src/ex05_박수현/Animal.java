@@ -9,7 +9,6 @@ public abstract class Animal {
 //	메소드
 //	    String getName() : 동물의 이름을 반환
 //	    void performActions() : 추상 메소드, 동물의 행동을 출력
-	    
 //	필드
 	protected String name;
 	
@@ -25,5 +24,4 @@ public abstract class Animal {
 	
 //	추상메소드
 	abstract void performActions();
-	
 }

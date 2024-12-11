@@ -9,7 +9,6 @@ public class Main {
 //		2. Animal 클래스를 배열 타입으로 생성하여 1번에 생성한 Pet 담기
 //		3. Zoo 객체 생성 후 메소드 사용하여 배열 담기
 //		4. Zoo 클래스의 printAllAnimals() 메소드 호출
-		
 		Pet p1 = new Pet("가루");
 		Pet p2 = new Pet("호두");
 		Pet p3 = new Pet("두부");
@@ -17,8 +16,6 @@ public class Main {
 		
 		Zoo zoo = new Zoo(3);
 		zoo.addAnimal(animals);
-		
 		zoo.printAllAnimals();
-		
 	}
 }

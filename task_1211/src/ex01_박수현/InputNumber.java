@@ -21,7 +21,6 @@ public class InputNumber {
 //		8. 버퍼비우기
 		Scanner sc = new Scanner(System.in);
 		int num1 = 0, num2 = 0, num3 = 0, max = 0, min = 0;
-		
 		System.out.print("정수 3개를 입력하세요 (띄어쓰기로 구분) :");
 		num1 = sc.nextInt();
 		num2 = sc.nextInt();
@@ -29,7 +28,6 @@ public class InputNumber {
 		
 		max = num1;
 		min = num1;
-
 		max = max < num2 && num2 > num3 ? num2 : max < num3 && num2 < num3 ? num3 : max;
 		min = min > num2 && num2 < num3 ? num2 : min > num3 && num2 > num3 ? num3 : min;
 		
@@ -42,13 +40,10 @@ public class InputNumber {
 //		2. 총합에 입력한 숫자 3개 전부 담기
 //		3. 평균 = 총합 / 3;
 //		4. printf로 결과 출력
-		
 		double total = 0.0, avg = 0.0;
 		
 		total = num1 + num2 + num3;
 		avg = total / 3;
 		System.out.printf("평균 : %.2f", avg);
-		
-		
 	}
 }

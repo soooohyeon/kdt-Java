@@ -8,7 +8,6 @@ public class AccountBasic implements Account {
 //	- 생성자
 //	    생성자를 통해 필드 값을 초기화한다
 //	    생성자는 단 1개만 존재하며, 이름과 잔액을 매개변수로 받음
-
 //	필드
 	private double balance;
 	private String accountHolder;
@@ -19,6 +18,7 @@ public class AccountBasic implements Account {
 		this.accountHolder = accountHolder;
 	}
 
+//	getter, setter 메소드
 	@Override
 	public double getBalance() {
 		return this.balance;
@@ -32,6 +32,7 @@ public class AccountBasic implements Account {
 		return accountHolder;
 	}
 	
+//	Account 인터페이스 추상메소드 오버라이딩
 	@Override
 	public void printDetails() {
 		System.out.printf("계좌 소유자 : %s, 잔액 : %.2f원\n", this.accountHolder, this.balance);

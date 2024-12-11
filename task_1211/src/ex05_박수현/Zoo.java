@@ -11,7 +11,6 @@ public class Zoo {
 //	    void addAnimal : 동물을 배열에 추가, 매개변수는 참조변수의 다형성 이용할 것
 //	        배열 크기를 초과하면 "더 이상 동물을 추가할 수 없습니다"를 출력
 //	    void printAllAnimals() : 모든 동물의 이름과 행동을 출력
-	
 //	필드
 	Animal[] animals;
 	int animalCount;
@@ -48,5 +47,4 @@ public class Zoo {
 			System.out.println();
 		}
 	}
-	
 }

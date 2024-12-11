@@ -31,7 +31,6 @@ public class Main {
 			}
 			System.out.println("잘못된 점수입니다.\n");
 		}
-		
 		Student st = new Student(name, javaScore, dbmsScore, htmlScore);
 		System.out.println(st.getName() + "님의 총점 : " + st.getTotalScore() + "점");
 		System.out.println(st.getName() + "님의 평균 : " + st.getAverageScore() + "점");

@@ -8,7 +8,6 @@ public class Student extends Person {
 //    - 메소드
 //        getTotalScore() : 세 과목 점수를 더한 값(정수)을 반환
 //        getAverageScore() : 평균(정수형)으로 반환
-	
 //	필드
 	private int javaScore;
 	private int dbmsScore;

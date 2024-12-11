@@ -29,7 +29,5 @@ public class Main {
 		System.out.println("\n===== 거래 후 계좌 정보 =====");
 		sa.printDetails();
 		ca.printDetails();
-		
-		
 	}
 }

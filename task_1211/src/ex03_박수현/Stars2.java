@@ -7,7 +7,6 @@ public class Stars2 {
 //		3.
 //		(2) 사용자로부터 행을 입력받아 입력받은 숫자만큼 행으로 직각삼각형 출력
 //		- 클래스명 : Stars2
-//		 
 //		[입출력결과]
 //		출력하고 싶은 행 입력 : 4
 //		*
@@ -18,7 +17,6 @@ public class Stars2 {
 //		안쪽 for문으로 하나씩 증가하는 * 출력
 //		후에 입력받은 값으로 바깥 for문 조건식 변경
 //		버퍼 비우기
-		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("출력하고 싶은 행 입력 : ");
 		int num = sc.nextInt();

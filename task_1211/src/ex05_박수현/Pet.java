@@ -10,11 +10,12 @@ public class Pet extends Animal {
 //	    void eat() : 동물이 먹는 행동을 출력
 //	    void sleep() : 동물이 잠자는 행동을 출력
 //	    void performActions() : 위 세 메소드를 호출하여 행동을 출력
-	
+//	생성자
 	public Pet(String name) {
 		super(name);
 	}
 
+//	메소드
 	void play() {
 		System.out.println("재밌게 놀고 있습니다.");
 	}
@@ -27,12 +28,11 @@ public class Pet extends Animal {
 		System.out.println("쿨쿨 자고 있습니다.");
 	}
 	
+//	오버라이딩 메소드
 	@Override
 	void performActions() {
 		play();
 		eat();
 		sleep();
 	}
-
-	
 }
