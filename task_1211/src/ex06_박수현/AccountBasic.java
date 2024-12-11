@@ -24,25 +24,16 @@ public class AccountBasic implements Account {
 		return this.balance;
 	}
 
-	@Override
-	public void printDetails() {
-		System.out.println("계좌 소유주 : " + this.accountHolder);
-		System.out.println("계좌 잔액 : " + this.balance);
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 
-////	getter, setter 메소드
-//	public double getBalance() {
-//		return balance;
-//	}
-//	public void setBalance(double balance) {
-//		this.balance = balance;
-//	}
-//	
-//	public String getAccountHolder() {
-//		return accountHolder;
-//	}
-//	public void setAccountHolder(String accountHolder) {
-//		this.accountHolder = accountHolder;
-//	}
+	public String getAccountHolder() {
+		return accountHolder;
+	}
 	
+	@Override
+	public void printDetails() {
+		System.out.printf("계좌 소유자 : %s, 잔액 : %.2f원\n", this.accountHolder, this.balance);
+	}
 }

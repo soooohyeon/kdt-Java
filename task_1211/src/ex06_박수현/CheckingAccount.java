@@ -1,7 +1,7 @@
 package ex06_박수현;
 
-public class SavingsAccount extends AccountBasic implements AdvanceAccount {
-//	- SavingsAccount 클래스
+public class CheckingAccount extends AccountBasic implements AdvanceAccount {
+//	- CheckingAccount 클래스
 //    AdvanceAccount 인터페이스 구현
 //    addInterest(double rate) 메소드 : 잔액(balance)에 주어진 비율(rate, %)만큼 이자 추가
 //                    printf 메소드를 사용하며 이자율은 소수점 2자리까지
@@ -10,14 +10,14 @@ public class SavingsAccount extends AccountBasic implements AdvanceAccount {
 //    receive(double amount) 메소드 : 수신 계좌의 잔액(balance)에 금액(amount)을 추가
 
 //	생성자 - SavingsAccount → 소유자 : 본인이름, 잔액: 10,000원
-	public SavingsAccount() {
-		super(10000, "박수현");
+	public CheckingAccount() {
+		super(20000, "짱구");
 	}
 
 //	상속받은 AccountBasic 클래스의 메소드 오버라이딩
 	@Override
 	public void printDetails() {
-		System.out.print("예금 계좌 - ");
+		System.out.print("체크 계좌 - ");
 		super.printDetails();
 	}
 
@@ -40,6 +40,7 @@ public class SavingsAccount extends AccountBasic implements AdvanceAccount {
 		} else {
 			System.out.println("송금 실패, 이유 : 잔액 부족");
 		}
+		target.printDetails();
 	}
 
 //  receive(double amount) 메소드 : 수신 계좌의 잔액(balance)에 금액(amount)을 추가

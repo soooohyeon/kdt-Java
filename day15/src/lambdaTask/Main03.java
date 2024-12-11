@@ -1,6 +1,6 @@
 package lambdaTask;
 
-public class Main3 {
+public class Main03 {
 	public static void main(String[] args) {
 //		3. 두 문자열을 입력받아 첫 번째 문자열을 두 번째 문자열의 길이만큼 잘라내는 프로그램을 만든다.
 //		ex)
@@ -29,7 +29,7 @@ public class Main3 {
 		System.out.println(s1.cutString("abcdefg", "aaa"));
 		System.out.println();
 		
-		Main3 m = new Main3();
+		Main03 m = new Main03();
 		String result1 = m.checkAlphabet("F").cutString("안녕하세요", "aa");
 		String result2 = m.checkAlphabet("B").cutString("자바공부중입니다", "a");
 		String result3 = m.checkAlphabet("c").cutString("asdfasd", "aaaa");

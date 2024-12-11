@@ -15,8 +15,9 @@ public class Main {
 		Pet p3 = new Pet("두부");
 		Animal[] animals = {p1, p2, p3};
 		
-		Zoo zoo = new Zoo(animals.length);
+		Zoo zoo = new Zoo(3);
 		zoo.addAnimal(animals);
+		
 		zoo.printAllAnimals();
 		
 	}

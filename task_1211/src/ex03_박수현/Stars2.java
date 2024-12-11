@@ -14,9 +14,10 @@ public class Stars2 {
 //		**
 //		***
 //		****
-//		이중 for 문 사용해서 바깥 for문으로 행 반복
+//		이중 for문 사용해서 바깥 for문으로 행 반복
 //		안쪽 for문으로 하나씩 증가하는 * 출력
 //		후에 입력받은 값으로 바깥 for문 조건식 변경
+//		버퍼 비우기
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("출력하고 싶은 행 입력 : ");

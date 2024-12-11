@@ -9,7 +9,7 @@ public interface AdvanceAccount extends Account {
 //    receive(double amount) 메소드 : 다른 계좌에서 송금된 금액을 수신 계좌이 잔액(blance)에 추가
 	
 //	추상 메소드
-	double addInterest(double rate);
+	void addInterest(double rate);
 	void transfer(Account target, double amount);
 	void receive(double amount);
 }

@@ -30,16 +30,9 @@ public class InputNumber {
 		max = num1;
 		min = num1;
 
-		if (max < num2 && num2 > num3) {
-			max = num2;
-		} else if (max < num3 && num2 < num3) {
-			max = num3;
-		}
-		if (min > num2 && num2 < num3) {
-			min = num2;
-		} else if (min > num3 && num2 > num3) {
-			min = num3;
-		}
+		max = max < num2 && num2 > num3 ? num2 : max < num3 && num2 < num3 ? num3 : max;
+		min = min > num2 && num2 < num3 ? num2 : min > num3 && num2 > num3 ? num3 : min;
+		
 		System.out.println("최대 : " + max);
 		System.out.println("최소 : " + min);
 		sc.close();
