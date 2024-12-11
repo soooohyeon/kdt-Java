@@ -23,4 +23,4 @@ public class SpeakerMain {
 		Person p2 = new Person(s2);
 		p2.turnOn();
 	}
-}
+} 
