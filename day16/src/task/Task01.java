@@ -28,27 +28,33 @@ public class Task01 {
 //		6) 버퍼 비우기
 		
 		Scanner sc = new Scanner(System.in);
-		int num = 0, total = 0;
+		Task01 t = new Task01();	// 메소드를 위한 객체화
+		int num = 0;
 		
 		System.out.print("정수 입력 : ");
 		try {
 			num = sc.nextInt();	// 해당 부분에서 정수가 아닌 숫자 입력 시 InputMismatchException으로 예외 처리
-			
-			if (num <= 0) {		// 양수가 아닌 정수 입력시
-				try {
-					throw new My01Exception("양의 정수를 입력해주세요.");	// 강제 예외 발생, 문구 직접 지정
-				} catch (My01Exception e) {							// 사용자 정의 예외 클래스으로 예외 처리
-					System.out.println(e.getMessage());				// 지정한 예외 문구 출력
-				}
-			} else {			// 양의 정수라면
-				for (int i = 1; i <= num; i++) {					// 총합 구하기
-					total += i;
-				}
-				System.out.println("1부터 " + num + "까지의 총합 : " + total);	// 결과 출력
-			}
+			t.printTotal(num);	// 총합 구하는 메소드 호출
 		} catch (InputMismatchException e) {
 			System.out.println("잘못된 입력입니다.");
+			System.out.println(e.toString());
 		} 
 		sc.close();		
+	}
+//	합계구하기 - 메소드로 분리
+	void printTotal(int num) {
+		int total = 0;
+		if (num <= 0) {		// 양수가 아닌 정수 입력시
+			try {
+				throw new My01Exception("양의 정수를 입력해주세요.");	// 강제 예외 발생, 문구 직접 지정
+			} catch (My01Exception e) {							// 사용자 정의 예외 클래스으로 예외 처리
+				System.out.println(e.getMessage());				// 지정한 예외 문구 출력
+			}
+		} else {			// 양의 정수라면
+			for (int i = 1; i <= num; i++) {					// 총합 구하기
+				total += i;
+			}
+			System.out.println("1부터 " + num + "까지의 총합 : " + total);	// 결과 출력
+		}
 	}
 }

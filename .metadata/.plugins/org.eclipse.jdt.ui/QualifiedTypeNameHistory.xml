@@ -51,8 +51,6 @@
     <fullyQualifiedTypeName name="javax.security.auth.login.AccountException"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="objectTest.Student"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="task.My03Exception"/>
     <fullyQualifiedTypeName name="task.My04Exception"/>
+    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

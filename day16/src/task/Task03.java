@@ -29,19 +29,24 @@ public class Task03 {
 		System.out.print("정수 입력 : ");
 		try {
 			number = sc.nextInt();
-			if (number >= 0 && number <= 100) {	// 범위 내 입력시 결과 출력
-				System.out.println("결과 : " + (number * 2));
-			} else {	// 범위 밖일 때 강제 예외 발생시키고 예외 처리하기
-				try {
-					throw new My03Exception("범위 밖의 정수입니다.");	// 일반예외 상속으로 오류 발생됨 → 바로 예외 처리해주면 해결
-				} catch (My03Exception e) {
-					System.out.println(e.getMessage());	// 지정한 문구로 예외메세지 출력
-				}
-			}
+			checkRange(number);	// 범위 체크 및 결과 출력 메소드 호출
 		} catch (InputMismatchException e) {
 			System.out.println("정수 외의 값 입력시 발생하는 예외 : " + e.toString());
 			System.out.println("잘못된 입력입니다.");
 		}
 		sc.close();
+	}
+	
+//	정적메소드 - 범위 체크 후 예외 처리, 범위 내라면 정수 * 2 출력
+	static void checkRange(int number) {
+		if (number >= 0 && number <= 100) {	// 범위 내 입력시 결과 출력
+			System.out.println("결과 : " + (number * 2));
+		} else {	// 범위 밖일 때 강제 예외 발생시키고 예외 처리하기
+			try {
+				throw new My03Exception("범위 밖의 정수입니다.");	// 일반예외 상속으로 오류 발생됨 → 바로 예외 처리해주면 해결
+			} catch (My03Exception e) {
+				System.out.println(e.getMessage());	// 지정한 문구로 예외메세지 출력
+			}
+		}
 	}
 }
