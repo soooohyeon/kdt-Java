@@ -18,12 +18,12 @@ public class ArrayListTest03 {
 		System.out.println(li);
 		
 //		값 가져오기 : 인덱스 번호로 특정 값 가져오기
-//		try {
-//			System.out.println(li.get(0));
-//			System.out.println(li.get(10));
-//		} catch (Exception e) {		// 어떠한 예외인지 저장해두지 않았기 때문의 부모인 Exception으로 예외 처리
-//			System.out.println("범위를 벗어났습니다.");
-//		}
+		try {
+			System.out.println(li.get(0));
+			System.out.println(li.get(10));
+		} catch (Exception e) {		// 어떠한 예외인지 저장해두지 않았기 때문의 부모인 Exception으로 예외 처리
+			System.out.println("범위를 벗어났습니다.");
+		}
 		
 //		삭제 : 인덱스 번호(int 타입)로 삭제
 //		삭제한 요소를 반환

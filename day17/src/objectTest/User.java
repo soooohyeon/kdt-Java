@@ -20,8 +20,7 @@ public class User {
 //	toString() 오버라이딩
 	@Override
 	public String toString() {
-//		return super.toString();	// objectTest.User@48cf768c로 나온 이유
-		return "User [userNumber : "  + userNumber + ", userName : " + userName + " ]" ;
+		return "User [userNumber : "  + userNumber + ", userName : " + userName + "]" ;
 	}
 
 //	hashCode() 오버라이딩
