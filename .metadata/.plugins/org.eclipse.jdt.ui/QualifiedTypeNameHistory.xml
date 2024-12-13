@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
-    <fullyQualifiedTypeName name="section07.Student"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.SeparatorUI"/>
-    <fullyQualifiedTypeName name="interfaceTest2.Ballad"/>
-    <fullyQualifiedTypeName name="classInterface.Parent"/>
-    <fullyQualifiedTypeName name="classInterface.InterfaceAAA"/>
-    <fullyQualifiedTypeName name="interfaceTest3.ParentA"/>
     <fullyQualifiedTypeName name="interfaceTest3.ParentB"/>
     <fullyQualifiedTypeName name="interfaceTest3.Child"/>
     <fullyQualifiedTypeName name="interfaceTest4.SmartHeater"/>
@@ -51,13 +44,20 @@
     <fullyQualifiedTypeName name="javax.security.auth.login.AccountException"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="objectTest.Student"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="task.My01Exception"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="task.My03Exception"/>
     <fullyQualifiedTypeName name="task.My04Exception"/>
     <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+    <fullyQualifiedTypeName name="listTest.AgeComparator"/>
+    <fullyQualifiedTypeName name="setTest.HashSetTest01"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
