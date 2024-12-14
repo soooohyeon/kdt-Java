@@ -1,5 +1,6 @@
 package scanner;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // 7번 : 입력메소드 실습
@@ -46,7 +47,7 @@ public class ScannerTask02 {
 //	   ------------------------------------------------------------------------
 	   
 //      2. 사용자로부터 일어난 시간(정수), 아침, 점심, 저녁에 할 일과 잠들 시간(정수)을 입력받아 출력하기
-//      - 일어날 시간과 아침, 점심, 저녁에 할 일, 잠들 시간을 각각 입력받기
+//      - 일어날 시간과 아침, 점심, 저녁에 할 일, 잠들 시간입력받기을 각각 
 //      - 순서대로 입력받고 출력할것
 //      - 출력 형식
 //		    오늘 일어난 시간은 00시이고 잠들 시간은 00시 입니다
@@ -87,33 +88,76 @@ public class ScannerTask02 {
 //	   System.out.println("저녁 : " + eveningToDo + "하기");
 //	   sc.nextLine();
 
+//     2-2. 사용자로부터 일어난 시간(정수), 아침, 점심, 저녁에 할 일과 잠들 시간(정수)을 입력받아 출력하기
+//     - 일어날 시간과 아침, 점심, 저녁에 할 일, 잠들 시간입력받기을 각각 
+//     - 순서대로 입력받고 출력할것
+//     - 출력 형식
+//		    오늘 일어난 시간은 00시이고 잠들 시간은 00시 입니다
+//		    아침 : 00하기
+//		    점심 : 00하기
+//		    저녁 : 00하기
+//	   1. Scanner 클래스 import
+//	   2. 시간을 입력받을 정수형 배열, 할 일을 입력받을 문자열 배열 선언 및 생성 (각 시간을 담은 배열도 생성)
+//	   3. 출력 메세지 및 for문 사용해서 입력받은 값 배열에 담기
+//	   		입력받을 값과 입력한 값이 다른 경우 예외 처리하며 프로그램 종료
+//	   4. for문 사용해서 형식대로 출력
+		int[] time = new int[2];
+		String[] toDo = new String[3];
+		String[] timeMsg = { "일어난", "잠들" };
+		String[] toDoMsg = { "아침", "점심", "저녁" };
+
+		try {
+			for (int i = 0; i < time.length; i++) {
+				System.out.print(timeMsg[i] + " 시간 입력 : ");
+				time[i] = sc.nextInt();
+			}
+			sc.nextLine();
+			for (int i = 0; i < toDo.length; i++) {
+				System.out.print(toDoMsg[i] + "에 할 일 : ");
+				toDo[i] = sc.nextLine();
+			}
+			
+			System.out.println(timeMsg[0] + " 시간은 " + time[0] + "시 이고 "
+						+ timeMsg[1] + " 시간은 " + time[1] + "시 입니다.");
+			for (int i = 0; i < toDo.length; i++) {
+				System.out.println(toDoMsg[i] + " : " + toDo[i] + "하기");
+			}
+
+		} catch (InputMismatchException e) {
+			System.out.println("잘못된 입력입니다.");
+		}
+	   
 //	   ------------------------------------------------------------------------
 	   
-//      3. 물건가격이 3000원이다. 사용자로부터 지불금액을 입력받아 거스름돈을 계산하기(뺄셈 - 이용)
-//      - 출력형식 예시
-//		   물건 가격은 3000원입니다
-//		   지불가격을 입력하세요 : 00
-//		   거스름돈은 7000원입니다
-	   
-//	   로직
-//	   1. 지불금액 변수와 계산을 저장할 변수 만들기
-	   final int ITEM_PRICE = 3000;
-	   int money = 0, result = 0;
-	   
-//	   2. 출력 메세지 ("물건 가격은 00원입니다", "지불가격을 입력하세요 : ")
-	   System.out.printf("물건 가격은 %d원입니다\n", ITEM_PRICE);
-	   System.out.print("지불가격을 입력하세요 : ");
-	   
-//	   3. 금액 입력받고 변수에 값 저장
-	   money = sc.nextInt();
-	   
-//	   4. 지불금액에서 10000원을 뺀 잔액을 결과 변수에 담기
-	   result = money - ITEM_PRICE;
-	   
-//	   5. 결과 출력하기
-	   System.out.println("거스름돈은 " + result + "원 입니다.");
-	   
-//	   ** close()
-	   sc.close();
+////      3. 물건가격이 3000원이다. 사용자로부터 지불금액을 입력받아 거스름돈을 계산하기(뺄셈 - 이용)
+////      - 출력형식 예시
+////		   물건 가격은 3000원입니다
+////		   지불가격을 입력하세요 : 00
+////		   거스름돈은 7000원입니다
+//	   
+////	   로직
+////	   1. 지불금액 변수와 계산을 저장할 변수 만들기
+//	   final int ITEM_PRICE = 3000;
+//	   int money = 0, result = 0;
+//	   
+////	   2. 출력 메세지 ("물건 가격은 00원입니다", "지불가격을 입력하세요 : ")
+//	   System.out.printf("물건 가격은 %d원입니다\n", ITEM_PRICE);
+//	   System.out.print("지불가격을 입력하세요 : ");
+//	   
+////	   3. 금액 입력받고 변수에 값 저장
+//	   money = sc.nextInt();
+//	   
+////	   4. 지불금액에서 10000원을 뺀 잔액을 결과 변수에 담기
+//	   result = money - ITEM_PRICE;
+//	   
+////	   5. 결과 출력하기
+//	   System.out.println("거스름돈은 " + result + "원 입니다.");
+//	   
+////	   ** close()
+//	   sc.close();
    }
+	   
+	static void inputValue() {
+		
+	}
 }
