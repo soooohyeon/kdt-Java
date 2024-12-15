@@ -1,10 +1,8 @@
 package methodTask;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-import javax.swing.plaf.SeparatorUI;
-
+// 보안ER팀
 public class Task03 {
 //	문제 01. 10x10 크기의 2차원 배열에 1부터 100까지의 자연수를 차례대로 저장한 후, 
 //			사용자로부터  입력 받은 두 수에 대해 해당 숫자의 배수들을 각각 찾아 
