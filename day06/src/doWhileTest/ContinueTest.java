@@ -1,7 +1,5 @@
 package doWhileTest;
 
-import java.util.Iterator;
-
 // 7번 : 기타 제어문 (continue문)
 public class ContinueTest {
 	public static void main(String[] args) {
