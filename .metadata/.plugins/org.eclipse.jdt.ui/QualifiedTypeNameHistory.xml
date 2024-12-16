@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="interfaceTest3.Child"/>
-    <fullyQualifiedTypeName name="interfaceTest4.SmartHeater"/>
-    <fullyQualifiedTypeName name="interfaceTest4.HeaterAdapter"/>
     <fullyQualifiedTypeName name="section10.Comic"/>
     <fullyQualifiedTypeName name="section10.Customer"/>
     <fullyQualifiedTypeName name="section10.Samsong"/>
@@ -51,13 +48,16 @@
     <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
     <fullyQualifiedTypeName name="listTest.AgeComparator"/>
     <fullyQualifiedTypeName name="setTest.HashSetTest01"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="task.CalendarTest"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="teamTask02.Employee"/>
 </qualifiedTypeNameHistroy>

@@ -1,5 +1,6 @@
 package teamTask;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserService {
@@ -9,29 +10,24 @@ public class UserService {
 //	- 회원가입 메소드
 //	- 로그인 메소드
 	
-//	필드
-	private List<UserVo> li;
+//	필드 - List는 메모리에 공간을 만들어줘야 아이디 체크 가능
+	private List<UserVO> li = new ArrayList<UserVO>();
 	
-	public UserService(List<UserVo> li) {
-		this.li = li;
+//	메소드
+//	- 아이디 중복검사 메소드 (메소드 안에서 중복 검사)
+//	리턴타입 : boolean
+//	메소드명 : checkId
+//	매개변수 : String id
+//		필드 수만큼 반복
+//			객체의 아이디에 입력받은 아이디와 일치하는게 있다면 true 리턴
+//		아니라면 fasle 리턴
+	boolean checkId(String id) {
+		for (UserVO user : li) {
+			return user.getId().equals(id);
+		}
+		return false;
 	}
 
-//	메소드
-	//아이디 중복여부를 List의 저장된 name들과 비교하여 
-	//겹치면 false 아니면 true
-	boolean ID_Check(String ID) {
-		while(true)
-		{
-			for(int i =0; i < li.size(); i++)   
-			{
-				if((li.get(i).getId()).equals(ID)) 
-				{
-					return true; 
-				}
-			}
-			return false;
-		}
-	}
 
 //	- 회원가입 메소드 (메소드 안에서 중복 검사)
 //	리턴타입 : boolean
@@ -40,19 +36,19 @@ public class UserService {
 //		아이디 중복검사 메소드 호출하고 ture 라면
 //			입력받은 정보 저장하고 true 리턴
 //		아니라면 fasle 리턴
-	boolean join (UserVo joinUser) {
-		if (ID_Check(joinUser.getId())) {
-			UserVo user = new UserVo();
-			return true;
+	void join (UserVO joinUser) {
+		if (!checkId(joinUser.getId())) {
+			li.add(joinUser);
+			System.out.println("회원가입 완료");
+		} else {
+			System.out.println("아이디 중복");
 		}
-		return false;
 	}
 //	- 회원가입 메소드2 (메인에서 중복 검사)
-	void join2 (UserVo joinUser) {
-		UserVo user = new UserVo();
+	void join2 (UserVO joinUser) {
+		li.add(joinUser);
 		System.out.println("회원가입 완료");
 	}
-	
 	
 //	- 로그인 메소드
 //	리턴타입 : boolean
@@ -63,12 +59,11 @@ public class UserService {
 //			아니라면 false }
 	boolean login(String id, String pw) {
 		for (int i = 0; i < li.size(); i++) {
-			UserVo user = li.get(i);
+			UserVO user = li.get(i);
 			if ((user.getId()).equals(id) && (user.getPw()).equals(pw)) {
 				return true;
 			}
 		}
 		return false;
 	}
-	
 }

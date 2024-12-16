@@ -1,18 +1,17 @@
 package teamTask;
 
-public class UserVo {
+public class UserVO {
 	
 	//필드
-	private int UserNum;
+	private int userNum;
 	private String id;
 	private String pw;
 	private String name;
 	private int age;
 	
 	//생성자
-	public UserVo(int userNum, String id, String pw, String name, int age) {
-		super();
-		this.UserNum = userNum;
+	public UserVO(int userNum, String id, String pw, String name, int age) {
+		this.userNum = userNum;
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
@@ -21,7 +20,7 @@ public class UserVo {
 		
 	//getter 생성
 	public int getUserNum() {
-		return UserNum;
+		return userNum;
 	}
 
 	public String getId() {
@@ -43,9 +42,24 @@ public class UserVo {
 	//toString 오버라이드
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "유저번호 : " + this.UserNum +"\nID : " + this.id + "\n비밀번호 : " + this.pw 
+		return "유저번호 : " + this.userNum +"\nID : " + this.id + "\nPW : " + this.pw 
 				+ "\n이름 : " + this.name + "나이 : " + this.age;
+	}
+
+	@Override
+	public int hashCode() {
+		return userNum;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj instanceof UserVO) {
+			return this.userNum == ((UserVO)obj).userNum;
+		}
+		return false;
 	}
 
 	
