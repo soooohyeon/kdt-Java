@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="interfaceTest3.Child"/>
-    <fullyQualifiedTypeName name="interfaceTest4.SmartHeater"/>
-    <fullyQualifiedTypeName name="interfaceTest4.HeaterAdapter"/>
     <fullyQualifiedTypeName name="section10.Comic"/>
     <fullyQualifiedTypeName name="section10.Customer"/>
     <fullyQualifiedTypeName name="section10.Samsong"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="task.CalendarTest"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="synchronization.WaitThread"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>
