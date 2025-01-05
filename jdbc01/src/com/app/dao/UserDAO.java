@@ -42,6 +42,7 @@ public class UserDAO {
 //			next() : 현재 커서 다음에 데이터가 존재하는지를 true / false로 반환
 //			get자료형(컬럼번호) :  커서를 다음행으로 옮기고 해당 컬럼의 값을 자료형에 맞게 가져옴
 			 if(resultSet.next()) {
+//				 System.out.println(resultSet.getString("userId"));
 			    return false;
 			 }
 		} catch (SQLException e) {

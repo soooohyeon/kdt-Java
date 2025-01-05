@@ -17,7 +17,7 @@ public class Test {
 		UserDTO userDTO = new UserDTO();
 		UserDAO userDAO = new UserDAO();
 		
-		userDTO.setUserId("abc");
+		userDTO.setUserId("aaa");
 		userDTO.setUserPw("1234");
 		userDTO.setUserName("홍길동");
 		userDTO.setUserAge(5);
